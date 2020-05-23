@@ -34,5 +34,15 @@ async def ban(ctx, user, arg1):
     )
     await channel.send(embed=embed)
 
+@client.command()
+async def warning(ctx, user, arg1):
+    channel = ctx.message.channel
+    embed = discord.Embed(
+        title="User Warned",
+        description=user + " was warned for " + arg1,
+        colour=discord.Color.green(),
+    )
+    await channel.send(embed=embed)
+
 
 client.run("NzExMzg5Nzc1ODQ4MDEzODQ1.XsFw3w.24LsNuW7p1bORtMxSb-MHY7OpZw")
